@@ -13,4 +13,5 @@ public struct Character: Codable {
     public let name: String
     public let status: String
     public let image: String
+    public let created: String
 }

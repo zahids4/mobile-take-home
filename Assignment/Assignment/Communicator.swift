@@ -67,4 +67,7 @@ class Communicator {
         fetchResources(url: baseURL, completion: result)
     }
     
+    public func fetchCharacterData(url: URL, result: @escaping (Result<Character, APIServiceError>) -> Void) {
+        fetchResources(url: url, completion: result)
+    }
 }
