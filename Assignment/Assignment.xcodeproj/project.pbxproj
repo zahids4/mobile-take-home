@@ -19,6 +19,7 @@
 		3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894B230B4FF900BB9139 /* EpisodesResponse.swift */; };
 		3059894E230B501C00BB9139 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894D230B501C00BB9139 /* Episode.swift */; };
 		30598950230B50A700BB9139 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894F230B50A700BB9139 /* Character.swift */; };
+		30598952230B5F8E00BB9139 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3059894B230B4FF900BB9139 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		3059894D230B501C00BB9139 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		3059894F230B50A700BB9139 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3059891D230B4D9300BB9139 /* LaunchScreen.storyboard */,
 				30598920230B4D9300BB9139 /* Info.plist */,
 				30598948230B4F8E00BB9139 /* Communicator.swift */,
+				30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */,
+				30598952230B5F8E00BB9139 /* EpisodeTableViewCell.swift in Sources */,
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* NSURLSession+Extensions.swift in Sources */,
