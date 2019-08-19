@@ -47,27 +47,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeCell" id="Mb5-WU-Y5s" customClass="EpisodeTableViewCell" customModule="Assignment" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="episodeCell" rowHeight="73" id="Mb5-WU-Y5s" customClass="EpisodeTableViewCell" customModule="Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mb5-WU-Y5s" id="VZC-O8-vBK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="72.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S01E01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYH-Ks-crb">
-                                            <rect key="frame" x="20" y="11" width="56" height="21.5"/>
+                                            <rect key="frame" x="300" y="11" width="56" height="50.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-mZ-tZ0">
+                                            <rect key="frame" x="20" y="11" width="200" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="YJ0-7e-kzt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-vZ-BpJ">
+                                            <rect key="frame" x="20" y="40.5" width="62" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="LYH-Ks-crb" firstAttribute="leading" secondItem="VZC-O8-vBK" secondAttribute="leading" constant="20" id="0ET-q9-sXE"/>
-                                        <constraint firstItem="LYH-Ks-crb" firstAttribute="top" secondItem="VZC-O8-vBK" secondAttribute="top" constant="11" id="76F-1y-9DB"/>
-                                        <constraint firstAttribute="bottom" secondItem="LYH-Ks-crb" secondAttribute="bottom" constant="11" id="eZQ-f9-peC"/>
+                                        <constraint firstItem="dlm-vZ-BpJ" firstAttribute="leading" secondItem="VZC-O8-vBK" secondAttribute="leading" constant="20" id="AbE-RD-TdH"/>
+                                        <constraint firstAttribute="bottom" secondItem="dlm-vZ-BpJ" secondAttribute="bottom" constant="11" id="YtE-LD-4eS"/>
+                                        <constraint firstItem="LYH-Ks-crb" firstAttribute="top" secondItem="VZC-O8-vBK" secondAttribute="top" constant="11" id="bta-Jp-WGT"/>
+                                        <constraint firstItem="LnE-mZ-tZ0" firstAttribute="leading" secondItem="VZC-O8-vBK" secondAttribute="leading" constant="20" id="dLj-Xm-DUe"/>
+                                        <constraint firstAttribute="bottom" secondItem="LYH-Ks-crb" secondAttribute="bottom" constant="11" id="dX8-Xo-aIs"/>
+                                        <constraint firstAttribute="trailing" secondItem="LYH-Ks-crb" secondAttribute="trailing" constant="20" id="jAk-Tx-4sz"/>
+                                        <constraint firstItem="dlm-vZ-BpJ" firstAttribute="top" secondItem="LnE-mZ-tZ0" secondAttribute="bottom" constant="8.5" id="qMg-L0-DFe"/>
+                                        <constraint firstItem="LnE-mZ-tZ0" firstAttribute="top" secondItem="VZC-O8-vBK" secondAttribute="top" constant="11" id="u97-E5-hsu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="airDateLabel" destination="dlm-vZ-BpJ" id="74J-fV-eCp"/>
+                                    <outlet property="nameLabel" destination="LnE-mZ-tZ0" id="otT-p8-Xt3"/>
                                     <outlet property="seasonEpisodeLabel" destination="LYH-Ks-crb" id="Sxu-jS-49n"/>
                                 </connections>
                             </tableViewCell>
@@ -80,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59T-PG-Vku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="21"/>
+            <point key="canvasLocation" x="1447.8260869565217" y="20.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yi6-m2-Dzt">

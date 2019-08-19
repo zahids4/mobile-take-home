@@ -9,17 +9,18 @@
 import UIKit
 
 class EpisodeTableViewCell: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var airDateLabel: UILabel!
     @IBOutlet weak var seasonEpisodeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureWith(_ episode: Episode) {
+        seasonEpisodeLabel.text = episode.episode
+        nameLabel.text = episode.name
+        airDateLabel.text = episode.airDate
     }
-
 }

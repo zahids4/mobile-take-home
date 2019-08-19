@@ -44,7 +44,7 @@ class EpisodesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath) as! EpisodeTableViewCell
 
-        cell.seasonEpisodeLabel.text = episodes[indexPath.row].episode
+        cell.configureWith(episodes[indexPath.row])
 
         return cell
     }
