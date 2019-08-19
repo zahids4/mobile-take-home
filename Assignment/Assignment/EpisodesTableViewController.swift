@@ -19,6 +19,10 @@ class EpisodesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchAndSetEpisodes()
+    }
+    
+    fileprivate func fetchAndSetEpisodes() {
         Communicator.shared.fetchEpisodes() { (result: Result<EpisodesResponse, Communicator.APIServiceError>) in
             switch result {
             case .success(let episodesResponse):
@@ -27,7 +31,6 @@ class EpisodesTableViewController: UITableViewController {
                 print(error.localizedDescription)
             }
         }
-        
     }
 
     // MARK: - Table view data source
