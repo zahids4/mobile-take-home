@@ -20,11 +20,11 @@ class CharacterTests: XCTestCase {
         ]
     }
 
-    func testSetsIsAliveToTrueIsStatusIsAlive() {
+    func testSetsIsAliveToTrueIfStatusIsAlive() {
         XCTAssertTrue(list.first!.isAlive())
     }
     
-    func testSetsIsAliveToFalseIsStatusIsNotAlive() {
+    func testSetsIsAliveToFalseIfStatusIsNotAlive() {
         XCTAssertFalse(list.last!.isAlive())
     }
 }
