@@ -43,7 +43,7 @@ class CharactersTableViewController: UITableViewController {
         group.notify(queue: .main) {
             aliveCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
             deadCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
-            return closure(["alive_characters": alivecharacters, "dead_characters": deadcharacters])
+            return closure(["alive_characters": aliveCharacters, "dead_characters": deadCharacters])
         }
         
     }
