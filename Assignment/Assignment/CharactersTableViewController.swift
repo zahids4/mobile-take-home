@@ -10,27 +10,30 @@ import UIKit
 
 class CharactersTableViewController: UITableViewController {
     var characterUrls: [String]!
+    var aliveCharacters = [Character]()
+    var deadCharacters = [Character]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllCharcters() { charactersMap in
-            print(charactersMap)
+        getAllCharacters() { charactersMap in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
-    fileprivate func getAllCharcters(closure: @escaping ([String: [Character]])-> ()) {
+    fileprivate func getAllCharacters(closure: @escaping ([String: [Character]])-> ()) {
         let group = DispatchGroup()
-        var aliveCharacters = [Character]()
-        var deadCharacters = [Character]()
+        
         for characterUrl in self.characterUrls! {
              group.enter()
             Communicator.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, Communicator.APIServiceError>) in
                 switch result {
                 case .success(let characterResponse):
                     if(characterResponse.status == "Alive") {
-                        aliveCharacters.append(characterResponse)
+                        self.aliveCharacters.append(characterResponse)
                     } else {
-                        deadCharacters.append(characterResponse)
+                        self.deadCharacters.append(characterResponse)
                     }
                     group.leave()
                 case .failure(let error):
@@ -41,9 +44,9 @@ class CharactersTableViewController: UITableViewController {
         }
         
         group.notify(queue: .main) {
-            aliveCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
-            deadCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
-            return closure(["alive_characters": aliveCharacters, "dead_characters": deadCharacters])
+            self.aliveCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
+            self.deadCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
+            closure(["alive_characters": self.aliveCharacters, "dead_characters": self.deadCharacters])
         }
         
     }
@@ -52,58 +55,31 @@ class CharactersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return aliveCharacters.count
+        }
+        
+        return deadCharacters.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
+        if(indexPath.section == 0) {
+            cell.textLabel?.text = aliveCharacters[indexPath.row].name
+            cell.detailTextLabel?.text = aliveCharacters[indexPath.row].status
+        } else {
+            cell.textLabel?.text = deadCharacters[indexPath.row].name
+            cell.detailTextLabel?.text = deadCharacters[indexPath.row].status
+        }
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
