@@ -98,12 +98,10 @@ class CharactersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "KILL!"
     }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle:   UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            let killedCharacter = aliveCharacters[indexPath.row]
-            aliveCharacters.remove(at: indexPath.row)
-            deadCharacters.append(killedCharacter)
+            killCharacter(indexPath, aliveArray: &aliveCharacters, deadArray: &deadCharacters)
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .middle)
             tableView.insertRows(at: [IndexPath(row: deadCharacters.count - 1, section: 1)], with: .middle)
@@ -131,5 +129,13 @@ class CharactersTableViewController: UITableViewController {
             let vc = segue.destination as! CharacterViewController
             vc.character = selectedCharacter
         }
+    }
+}
+
+extension CharactersTableViewController {
+    public func killCharacter(_ indexPath: IndexPath, aliveArray: inout [Character], deadArray: inout [Character]) {
+        let killedCharacter = aliveArray[indexPath.row]
+        aliveArray.remove(at: indexPath.row)
+        deadArray.append(killedCharacter)
     }
 }

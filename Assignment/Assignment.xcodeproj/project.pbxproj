@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2721D1A6230C770B00BC92A4 /* NetworkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */; };
+		2721D1AE230C938C00BC92A4 /* CharactersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1AD230C938C00BC92A4 /* CharactersTableViewControllerTests.swift */; };
 		30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598914230B4D9200BB9139 /* AppDelegate.swift */; };
 		3059891A230B4D9200BB9139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30598918230B4D9200BB9139 /* Main.storyboard */; };
 		3059891C230B4D9300BB9139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3059891B230B4D9300BB9139 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAlert.swift; sourceTree = "<group>"; };
+		2721D1AD230C938C00BC92A4 /* CharactersTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		30598911230B4D9200BB9139 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30598914230B4D9200BB9139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30598919230B4D9200BB9139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				30598929230B4D9400BB9139 /* CharacterTests.swift */,
 				3059892B230B4D9400BB9139 /* Info.plist */,
+				2721D1AD230C938C00BC92A4 /* CharactersTableViewControllerTests.swift */,
 			);
 			path = AssignmentTests;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3059892A230B4D9400BB9139 /* CharacterTests.swift in Sources */,
+				2721D1AE230C938C00BC92A4 /* CharactersTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
