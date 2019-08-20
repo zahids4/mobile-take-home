@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2721D1A6230C770B00BC92A4 /* NetworkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */; };
+		2721D1A6230C770B00BC92A4 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* Alerts.swift */; };
 		2721D1AE230C938C00BC92A4 /* CharactersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1AD230C938C00BC92A4 /* CharactersTableViewControllerTests.swift */; };
 		30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598914230B4D9200BB9139 /* AppDelegate.swift */; };
 		3059891A230B4D9200BB9139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30598918230B4D9200BB9139 /* Main.storyboard */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAlert.swift; sourceTree = "<group>"; };
+		2721D1A5230C770B00BC92A4 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		2721D1AD230C938C00BC92A4 /* CharactersTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		30598911230B4D9200BB9139 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30598914230B4D9200BB9139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		2721D1A4230C76F400BC92A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */,
+				2721D1A5230C770B00BC92A4 /* Alerts.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */,
-				2721D1A6230C770B00BC92A4 /* NetworkAlert.swift in Sources */,
+				2721D1A6230C770B00BC92A4 /* Alerts.swift in Sources */,
 				30598949230B4F8E00BB9139 /* ApiProvider.swift in Sources */,
 				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,

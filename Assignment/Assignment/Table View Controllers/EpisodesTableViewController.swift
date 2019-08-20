@@ -28,11 +28,14 @@ class EpisodesTableViewController: UITableViewController {
     }
     
     fileprivate func fetchAndSetEpisodes() {
+        present(getLoaderAlert(), animated: true, completion: nil)
         ApiProvider.shared.fetchEpisodes() { (result: Result<EpisodesResponse, ApiProvider.APIServiceError>) in
             switch result {
             case .success(let episodesResponse):
+                self.dismiss(animated: false, completion: nil)
                 self.episodes = episodesResponse.results
             case .failure(let error):
+                self.dismiss(animated: false, completion: nil)
                 self.present(getNetworkErrorAlert(), animated: true, completion: nil)
                 print(error.localizedDescription)
             }

@@ -29,7 +29,7 @@ class CharactersTableViewController: UITableViewController {
     
     fileprivate func getAllCharacters(closure: @escaping ([String: [Character]])-> ()) {
         let group = DispatchGroup()
-        
+        present(getLoaderAlert(), animated: true, completion: nil)
         for characterUrl in self.characterUrls! {
              group.enter()
             ApiProvider.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, ApiProvider.APIServiceError>) in
@@ -50,6 +50,7 @@ class CharactersTableViewController: UITableViewController {
         }
         
         group.notify(queue: .main) {
+            self.dismiss(animated: false, completion: nil)
             self.aliveCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
             self.deadCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
             closure(["alive_characters": self.aliveCharacters, "dead_characters": self.deadCharacters])
