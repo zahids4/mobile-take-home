@@ -1,5 +1,5 @@
 //
-//  NSURLSession+Extensions.swift
+//  URLSession+Extensions.swift
 //  Assignment
 //
 //  Created by Saim Zahid on 2019-08-19.

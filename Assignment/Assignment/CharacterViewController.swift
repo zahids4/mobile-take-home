@@ -15,6 +15,6 @@ class CharacterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(character)
+        characterImage.setImage(from: character!.image)
     }
 }

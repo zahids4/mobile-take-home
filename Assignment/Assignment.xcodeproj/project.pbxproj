@@ -14,7 +14,7 @@
 		3059892A230B4D9400BB9139 /* AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598929230B4D9400BB9139 /* AssignmentTests.swift */; };
 		30598935230B4D9400BB9139 /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598934230B4D9400BB9139 /* AssignmentUITests.swift */; };
 		30598943230B4EC200BB9139 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */; };
-		30598947230B4F5300BB9139 /* NSURLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598946230B4F5300BB9139 /* NSURLSession+Extensions.swift */; };
+		30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598946230B4F5300BB9139 /* URLSession+Extensions.swift */; };
 		30598949230B4F8E00BB9139 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598948230B4F8E00BB9139 /* Communicator.swift */; };
 		3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894B230B4FF900BB9139 /* EpisodesResponse.swift */; };
 		3059894E230B501C00BB9139 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894D230B501C00BB9139 /* Episode.swift */; };
@@ -22,6 +22,7 @@
 		30598952230B5F8E00BB9139 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */; };
 		30598954230B6C2900BB9139 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598953230B6C2900BB9139 /* CharactersTableViewController.swift */; };
 		30598956230B995900BB9139 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598955230B995900BB9139 /* CharacterViewController.swift */; };
+		30598958230BA08700BB9139 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598957230BA08700BB9139 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 		30598934230B4D9400BB9139 /* AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentUITests.swift; sourceTree = "<group>"; };
 		30598936230B4D9400BB9139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
-		30598946230B4F5300BB9139 /* NSURLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSURLSession+Extensions.swift"; sourceTree = "<group>"; };
+		30598946230B4F5300BB9139 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		30598948230B4F8E00BB9139 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		3059894B230B4FF900BB9139 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		3059894D230B501C00BB9139 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		30598953230B6C2900BB9139 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
 		30598955230B995900BB9139 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		30598957230BA08700BB9139 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		30598908230B4D9200BB9139 = {
 			isa = PBXGroup;
 			children = (
+				30598957230BA08700BB9139 /* UIImageView+Extensions.swift */,
 				3059894A230B4FDE00BB9139 /* Models */,
 				30598945230B4F3B00BB9139 /* Extensions */,
 				30598913230B4D9200BB9139 /* Assignment */,
@@ -150,7 +153,7 @@
 		30598945230B4F3B00BB9139 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				30598946230B4F5300BB9139 /* NSURLSession+Extensions.swift */,
+				30598946230B4F5300BB9139 /* URLSession+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,9 +301,10 @@
 			files = (
 				30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */,
 				30598952230B5F8E00BB9139 /* EpisodeTableViewCell.swift in Sources */,
+				30598958230BA08700BB9139 /* UIImageView+Extensions.swift in Sources */,
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
-				30598947230B4F5300BB9139 /* NSURLSession+Extensions.swift in Sources */,
+				30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */,
 				30598949230B4F8E00BB9139 /* Communicator.swift in Sources */,
 				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,
