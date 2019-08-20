@@ -185,8 +185,20 @@
                                     <constraint firstAttribute="height" constant="250" id="ezI-lX-rAa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-N6-euV">
-                                <rect key="frame" x="186" y="396" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-N6-euV">
+                                <rect key="frame" x="184.5" y="396" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrZ-aX-SYq">
+                                <rect key="frame" x="178.5" y="425" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nW-qP-rzX">
+                                <rect key="frame" x="176.5" y="454" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -196,14 +208,20 @@
                         <constraints>
                             <constraint firstItem="ldJ-N6-euV" firstAttribute="top" secondItem="KIo-Db-mAT" secondAttribute="bottom" constant="8" id="3I1-nZ-2c0"/>
                             <constraint firstItem="ldJ-N6-euV" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="4Uu-fz-Klw"/>
+                            <constraint firstItem="ZrZ-aX-SYq" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="8hj-Z9-nTB"/>
+                            <constraint firstItem="3nW-qP-rzX" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="MhV-wO-fRa"/>
                             <constraint firstItem="KIo-Db-mAT" firstAttribute="top" secondItem="HPw-uS-v14" secondAttribute="top" constant="50" id="P1y-f4-qGn"/>
+                            <constraint firstItem="3nW-qP-rzX" firstAttribute="top" secondItem="ZrZ-aX-SYq" secondAttribute="bottom" constant="8" id="eAz-PD-COX"/>
                             <constraint firstItem="KIo-Db-mAT" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="s88-nq-nVt"/>
+                            <constraint firstItem="ZrZ-aX-SYq" firstAttribute="top" secondItem="ldJ-N6-euV" secondAttribute="bottom" constant="8" id="wmB-zX-riq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HPw-uS-v14"/>
                     </view>
                     <connections>
                         <outlet property="characterImage" destination="KIo-Db-mAT" id="rjD-zR-lYr"/>
-                        <outlet property="nameLabel" destination="ldJ-N6-euV" id="AIr-CF-INg"/>
+                        <outlet property="genderLabel" destination="ZrZ-aX-SYq" id="aet-5h-dJH"/>
+                        <outlet property="nameLabel" destination="ldJ-N6-euV" id="jUM-Wg-54h"/>
+                        <outlet property="speciesLabel" destination="3nW-qP-rzX" id="tuh-rD-bd7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hah-Tz-WoF" userLabel="First Responder" sceneMemberID="firstResponder"/>

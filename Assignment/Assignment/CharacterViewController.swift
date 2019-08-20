@@ -11,6 +11,8 @@ import UIKit
 class CharacterViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
     
     var character: Character!
     
@@ -23,5 +25,7 @@ class CharacterViewController: UIViewController {
     fileprivate func configureView() {
         characterImage.setImage(from: character!.image)
         nameLabel.text = character.name
+        genderLabel.text = character.gender
+        speciesLabel.text = character.species
     }
 }
