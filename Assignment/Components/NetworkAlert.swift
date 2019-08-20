@@ -1,5 +1,5 @@
 //
-//  Alert.swift
+//  NetworkAlert.swift
 //  Assignment
 //
 //  Created by Saim Zahid on 2019-08-20.

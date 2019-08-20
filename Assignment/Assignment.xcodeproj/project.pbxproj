@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2721D1A6230C770B00BC92A4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* Alert.swift */; };
+		2721D1A6230C770B00BC92A4 /* NetworkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */; };
 		30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598914230B4D9200BB9139 /* AppDelegate.swift */; };
 		3059891A230B4D9200BB9139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30598918230B4D9200BB9139 /* Main.storyboard */; };
 		3059891C230B4D9300BB9139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3059891B230B4D9300BB9139 /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2721D1A5230C770B00BC92A4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAlert.swift; sourceTree = "<group>"; };
 		30598911230B4D9200BB9139 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30598914230B4D9200BB9139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30598919230B4D9200BB9139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,9 +79,44 @@
 		2721D1A4230C76F400BC92A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2721D1A5230C770B00BC92A4 /* Alert.swift */,
+				2721D1A5230C770B00BC92A4 /* NetworkAlert.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2721D1A9230C8F5400BC92A4 /* Table View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2721D1AA230C8F7500BC92A4 /* Cells */,
+				30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */,
+				30598953230B6C2900BB9139 /* CharactersTableViewController.swift */,
+			);
+			path = "Table View Controllers";
+			sourceTree = "<group>";
+		};
+		2721D1AA230C8F7500BC92A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2721D1AB230C8F8B00BC92A4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30598955230B995900BB9139 /* CharacterViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2721D1AC230C8FA100BC92A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				30598918230B4D9200BB9139 /* Main.storyboard */,
+				3059891D230B4D9300BB9139 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		30598908230B4D9200BB9139 = {
@@ -108,16 +143,13 @@
 		30598913230B4D9200BB9139 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				2721D1AC230C8FA100BC92A4 /* Storyboards */,
+				2721D1AB230C8F8B00BC92A4 /* View Controllers */,
+				2721D1A9230C8F5400BC92A4 /* Table View Controllers */,
 				30598914230B4D9200BB9139 /* AppDelegate.swift */,
-				30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */,
-				30598918230B4D9200BB9139 /* Main.storyboard */,
 				3059891B230B4D9300BB9139 /* Assets.xcassets */,
-				3059891D230B4D9300BB9139 /* LaunchScreen.storyboard */,
 				30598920230B4D9300BB9139 /* Info.plist */,
 				30598948230B4F8E00BB9139 /* ApiProvider.swift */,
-				30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */,
-				30598953230B6C2900BB9139 /* CharactersTableViewController.swift */,
-				30598955230B995900BB9139 /* CharacterViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -257,7 +289,7 @@
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */,
-				2721D1A6230C770B00BC92A4 /* Alert.swift in Sources */,
+				2721D1A6230C770B00BC92A4 /* NetworkAlert.swift in Sources */,
 				30598949230B4F8E00BB9139 /* ApiProvider.swift in Sources */,
 				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,
