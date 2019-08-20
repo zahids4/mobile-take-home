@@ -10,24 +10,29 @@ import UIKit
 
 class CharactersTableViewController: UITableViewController {
     var characterUrls: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllCharcters() { charaters in
-            print(charaters.count)
+        getAllCharcters() { charactersMap in
+            print(charactersMap)
         }
     }
     
-    fileprivate func getAllCharcters(closure: @escaping ([Character])-> ()) {
+    fileprivate func getAllCharcters(closure: @escaping ([String: [Character]])-> ()) {
         let group = DispatchGroup()
-        var characters = [Character]()
-
+        var aliveCharacters = [Character]()
+        var deadCharacters = [Character]()
         for characterUrl in self.characterUrls! {
              group.enter()
             Communicator.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, Communicator.APIServiceError>) in
                 switch result {
                 case .success(let characterResponse):
+                    if(characterResponse.status == "Alive") {
+                        aliveCharacters.append(characterResponse)
+                    } else {
+                        deadCharacters.append(characterResponse)
+                    }
                     group.leave()
-                    characters.append(characterResponse)
                 case .failure(let error):
                     group.leave()
                     print(error.localizedDescription)
@@ -36,7 +41,9 @@ class CharactersTableViewController: UITableViewController {
         }
         
         group.notify(queue: .main) {
-            return closure(characters)
+            aliveCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
+            deadCharacters.sort(by: { $0.created.compare($1.created) == .orderedDescending })
+            return closure(["alive_characters": alivecharacters, "dead_characters": deadcharacters])
         }
         
     }
