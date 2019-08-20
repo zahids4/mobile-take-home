@@ -67,8 +67,4 @@ class ApiProvider {
     public func fetchCharacterData(url: URL, result: @escaping (Result<Character, APIServiceError>) -> Void) {
         fetchResources(url: url, completion: result)
     }
-    
-    public func fetchCharacterImage(url: URL, result: @escaping (Result<Data, APIServiceError>) -> Void) {
-        fetchResources(url: url, completion: result)
-    }
 }

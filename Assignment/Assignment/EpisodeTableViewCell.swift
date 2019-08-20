@@ -12,12 +12,7 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var airDateLabel: UILabel!
     @IBOutlet weak var seasonEpisodeLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+
     func configureWith(_ episode: Episode) {
         seasonEpisodeLabel.text = episode.episode
         nameLabel.text = episode.name

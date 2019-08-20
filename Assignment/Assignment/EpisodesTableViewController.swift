@@ -12,15 +12,19 @@ class EpisodesTableViewController: UITableViewController {
     var characterUrls: [String]!
     var episodes = [Episode]() {
         didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            refreshTableView()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAndSetEpisodes()
+    }
+    
+    fileprivate func refreshTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     fileprivate func fetchAndSetEpisodes() {
@@ -57,8 +61,12 @@ class EpisodesTableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.characterUrls = self.episodes[indexPath.row].characters
             tableView.deselectRow(at: indexPath, animated: true)
-            self.performSegue(withIdentifier: "showCharactersList", sender: self)
+            self.navigateToCharactersList()
         }  
+    }
+    
+    fileprivate func navigateToCharactersList() {
+        self.performSegue(withIdentifier: "showCharactersList", sender: self)
     }
 
     
