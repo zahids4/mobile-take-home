@@ -9,6 +9,7 @@
 import UIKit
 
 class EpisodesTableViewController: UITableViewController {
+    var characterUrls: [String]!
     var episodes = [Episode]() {
         didSet {
             DispatchQueue.main.async {
@@ -53,39 +54,19 @@ class EpisodesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        getAllCharcters(episodeNumber: indexPath.row) { characters in
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "showCharactersList", sender: self)
-                tableView.deselectRow(at: indexPath, animated: true)
-            }
-        }
-    }
-    
-    fileprivate func getAllCharcters(episodeNumber: Int, closure: @escaping ([Character]) -> ()) {
-        var characters = [Character]()
-        for characterUrl in episodes[episodeNumber].characters {
-            Communicator.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, Communicator.APIServiceError>) in
-                switch result {
-                case .success(let characterResponse):
-                    print(characterResponse)
-                    characters.append(characterResponse)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-        }
-        
-        closure(characters)
+        DispatchQueue.main.async {
+            self.characterUrls = self.episodes[indexPath.row].characters
+            tableView.deselectRow(at: indexPath, animated: true)
+            self.performSegue(withIdentifier: "showCharactersList", sender: self)
+        }  
     }
 
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCharactersList" {
-            print("NAVV")
+            let vc = segue.destination as! CharactersTableViewController
+            vc.characterUrls = characterUrls
         }
     }
-    
-
 }
