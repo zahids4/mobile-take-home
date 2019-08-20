@@ -35,7 +35,7 @@ class CharactersTableViewController: UITableViewController {
             ApiProvider.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, ApiProvider.APIServiceError>) in
                 switch result {
                 case .success(let characterResponse):
-                    if(characterResponse.status == "Alive") {
+                    if(characterResponse.isAlive()) {
                         self.aliveCharacters.append(characterResponse)
                     } else {
                         self.deadCharacters.append(characterResponse)

@@ -17,3 +17,9 @@ public struct Character: Codable {
     public let species: String
     public let created: String
 }
+
+extension Character {
+    func isAlive() -> Bool {
+        return self.status == "Alive"
+    }
+}
