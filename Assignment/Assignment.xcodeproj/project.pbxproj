@@ -21,6 +21,7 @@
 		30598950230B50A700BB9139 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894F230B50A700BB9139 /* Character.swift */; };
 		30598952230B5F8E00BB9139 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */; };
 		30598954230B6C2900BB9139 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598953230B6C2900BB9139 /* CharactersTableViewController.swift */; };
+		30598956230B995900BB9139 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598955230B995900BB9139 /* CharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3059894F230B50A700BB9139 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		30598953230B6C2900BB9139 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
+		30598955230B995900BB9139 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				30598948230B4F8E00BB9139 /* Communicator.swift */,
 				30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */,
 				30598953230B6C2900BB9139 /* CharactersTableViewController.swift */,
+				30598955230B995900BB9139 /* CharacterViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* NSURLSession+Extensions.swift in Sources */,
 				30598949230B4F8E00BB9139 /* Communicator.swift in Sources */,
+				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,
 				30598954230B6C2900BB9139 /* CharactersTableViewController.swift in Sources */,
 				30598943230B4EC200BB9139 /* EpisodesTableViewController.swift in Sources */,

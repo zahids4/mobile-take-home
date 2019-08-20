@@ -10,6 +10,7 @@ import UIKit
 
 class CharactersTableViewController: UITableViewController {
     var characterUrls: [String]!
+    var selectedCharacter: Character!
     var aliveCharacters = [Character]()
     var deadCharacters = [Character]()
     
@@ -78,15 +79,26 @@ class CharactersTableViewController: UITableViewController {
 
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            self.selectedCharacter = self.aliveCharacters[indexPath.row]
+        } else {
+            self.selectedCharacter = self.deadCharacters[indexPath.row]
+        }
+        
+        DispatchQueue.main.async {
+            tableView.deselectRow(at: indexPath, animated: true)
+            self.performSegue(withIdentifier: "showCharacterDetails", sender: self)
+        }
     }
-    */
 
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCharacterDetails" {
+            let vc = segue.destination as! CharacterViewController
+            vc.character = selectedCharacter
+        }
+    }
 }
