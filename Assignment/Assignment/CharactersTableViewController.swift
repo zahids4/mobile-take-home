@@ -14,7 +14,6 @@ class CharactersTableViewController: UITableViewController {
     var aliveCharacters = [Character]()
     var deadCharacters = [Character]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllCharacters() { charactersMap in
@@ -69,16 +68,11 @@ class CharactersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return aliveCharacters.count
-        }
-        
-        return deadCharacters.count
+        return section == 0 ? aliveCharacters.count : deadCharacters.count
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
+    fileprivate func configureCell(_ indexPath: IndexPath, _ cell: UITableViewCell) {
         if(indexPath.section == 0) {
             cell.textLabel?.text = aliveCharacters[indexPath.row].name
             cell.detailTextLabel?.text = aliveCharacters[indexPath.row].created
@@ -86,6 +80,12 @@ class CharactersTableViewController: UITableViewController {
             cell.textLabel?.text = deadCharacters[indexPath.row].name
             cell.detailTextLabel?.text = deadCharacters[indexPath.row].created
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
+        
+        configureCell(indexPath, cell)
 
         return cell
     }

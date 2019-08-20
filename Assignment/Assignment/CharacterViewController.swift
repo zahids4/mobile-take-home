@@ -14,8 +14,13 @@ class CharacterViewController: UIViewController {
     
     var character: Character!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    fileprivate func configureView() {
         characterImage.setImage(from: character!.image)
         nameLabel.text = character.name
     }
