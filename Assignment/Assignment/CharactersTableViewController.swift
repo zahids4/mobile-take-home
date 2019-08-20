@@ -43,6 +43,7 @@ class CharactersTableViewController: UITableViewController {
                     group.leave()
                 case .failure(let error):
                     group.leave()
+                    self.present(getNetworkErrorAlert(), animated: true, completion: nil)
                     print(error.localizedDescription)
                 }
             }

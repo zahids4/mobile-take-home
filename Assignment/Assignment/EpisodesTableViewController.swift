@@ -33,6 +33,7 @@ class EpisodesTableViewController: UITableViewController {
             case .success(let episodesResponse):
                 self.episodes = episodesResponse.results
             case .failure(let error):
+                self.present(getNetworkErrorAlert(), animated: true, completion: nil)
                 print(error.localizedDescription)
             }
         }

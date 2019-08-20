@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2721D1A6230C770B00BC92A4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721D1A5230C770B00BC92A4 /* Alert.swift */; };
 		30598915230B4D9200BB9139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598914230B4D9200BB9139 /* AppDelegate.swift */; };
 		3059891A230B4D9200BB9139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30598918230B4D9200BB9139 /* Main.storyboard */; };
 		3059891C230B4D9300BB9139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3059891B230B4D9300BB9139 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2721D1A5230C770B00BC92A4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		30598911230B4D9200BB9139 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30598914230B4D9200BB9139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30598919230B4D9200BB9139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,9 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2721D1A4230C76F400BC92A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2721D1A5230C770B00BC92A4 /* Alert.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		30598908230B4D9200BB9139 = {
 			isa = PBXGroup;
 			children = (
+				2721D1A4230C76F400BC92A4 /* Components */,
 				3059894A230B4FDE00BB9139 /* Models */,
 				30598945230B4F3B00BB9139 /* Extensions */,
 				30598913230B4D9200BB9139 /* Assignment */,
@@ -305,6 +316,7 @@
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */,
+				2721D1A6230C770B00BC92A4 /* Alert.swift in Sources */,
 				30598949230B4F8E00BB9139 /* ApiProvider.swift in Sources */,
 				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,
