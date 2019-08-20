@@ -14,12 +14,17 @@ class CharactersTableViewController: UITableViewController {
     var aliveCharacters = [Character]()
     var deadCharacters = [Character]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllCharacters() { charactersMap in
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.refreshTable()
+        }
+    }
+    
+    fileprivate func refreshTable() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     

@@ -95,7 +95,6 @@
 		30598908230B4D9200BB9139 = {
 			isa = PBXGroup;
 			children = (
-				30598957230BA08700BB9139 /* UIImageView+Extensions.swift */,
 				3059894A230B4FDE00BB9139 /* Models */,
 				30598945230B4F3B00BB9139 /* Extensions */,
 				30598913230B4D9200BB9139 /* Assignment */,
@@ -153,6 +152,7 @@
 		30598945230B4F3B00BB9139 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				30598957230BA08700BB9139 /* UIImageView+Extensions.swift */,
 				30598946230B4F5300BB9139 /* URLSession+Extensions.swift */,
 			);
 			path = Extensions;
