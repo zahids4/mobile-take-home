@@ -32,7 +32,7 @@ class CharactersTableViewController: UITableViewController {
         
         for characterUrl in self.characterUrls! {
              group.enter()
-            Communicator.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, Communicator.APIServiceError>) in
+            ApiProvider.shared.fetchCharacterData(url: URL(string: characterUrl)!) { (result: Result<Character, ApiProvider.APIServiceError>) in
                 switch result {
                 case .success(let characterResponse):
                     if(characterResponse.status == "Alive") {
@@ -88,6 +88,21 @@ class CharactersTableViewController: UITableViewController {
         configureCell(indexPath, cell)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.section == 0
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle:   UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let killedCharacter = aliveCharacters[indexPath.row]
+            aliveCharacters.remove(at: indexPath.row)
+            deadCharacters.append(killedCharacter)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .middle)
+            tableView.insertRows(at: [IndexPath(row: deadCharacters.count - 1, section: 1)], with: .middle)
+            tableView.endUpdates()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

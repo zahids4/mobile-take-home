@@ -15,7 +15,7 @@
 		30598935230B4D9400BB9139 /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598934230B4D9400BB9139 /* AssignmentUITests.swift */; };
 		30598943230B4EC200BB9139 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */; };
 		30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598946230B4F5300BB9139 /* URLSession+Extensions.swift */; };
-		30598949230B4F8E00BB9139 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598948230B4F8E00BB9139 /* Communicator.swift */; };
+		30598949230B4F8E00BB9139 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30598948230B4F8E00BB9139 /* ApiProvider.swift */; };
 		3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894B230B4FF900BB9139 /* EpisodesResponse.swift */; };
 		3059894E230B501C00BB9139 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894D230B501C00BB9139 /* Episode.swift */; };
 		30598950230B50A700BB9139 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059894F230B50A700BB9139 /* Character.swift */; };
@@ -57,7 +57,7 @@
 		30598936230B4D9400BB9139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30598942230B4EC200BB9139 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
 		30598946230B4F5300BB9139 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
-		30598948230B4F8E00BB9139 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		30598948230B4F8E00BB9139 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		3059894B230B4FF900BB9139 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		3059894D230B501C00BB9139 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		3059894F230B50A700BB9139 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				3059891B230B4D9300BB9139 /* Assets.xcassets */,
 				3059891D230B4D9300BB9139 /* LaunchScreen.storyboard */,
 				30598920230B4D9300BB9139 /* Info.plist */,
-				30598948230B4F8E00BB9139 /* Communicator.swift */,
+				30598948230B4F8E00BB9139 /* ApiProvider.swift */,
 				30598951230B5F8E00BB9139 /* EpisodeTableViewCell.swift */,
 				30598953230B6C2900BB9139 /* CharactersTableViewController.swift */,
 				30598955230B995900BB9139 /* CharacterViewController.swift */,
@@ -305,7 +305,7 @@
 				3059894E230B501C00BB9139 /* Episode.swift in Sources */,
 				30598950230B50A700BB9139 /* Character.swift in Sources */,
 				30598947230B4F5300BB9139 /* URLSession+Extensions.swift in Sources */,
-				30598949230B4F8E00BB9139 /* Communicator.swift in Sources */,
+				30598949230B4F8E00BB9139 /* ApiProvider.swift in Sources */,
 				30598956230B995900BB9139 /* CharacterViewController.swift in Sources */,
 				3059894C230B4FF900BB9139 /* EpisodesResponse.swift in Sources */,
 				30598954230B6C2900BB9139 /* CharactersTableViewController.swift in Sources */,

@@ -24,7 +24,7 @@ class EpisodesTableViewController: UITableViewController {
     }
     
     fileprivate func fetchAndSetEpisodes() {
-        Communicator.shared.fetchEpisodes() { (result: Result<EpisodesResponse, Communicator.APIServiceError>) in
+        ApiProvider.shared.fetchEpisodes() { (result: Result<EpisodesResponse, ApiProvider.APIServiceError>) in
             switch result {
             case .success(let episodesResponse):
                 self.episodes = episodesResponse.results

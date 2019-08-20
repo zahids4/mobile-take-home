@@ -1,5 +1,5 @@
 //
-//  Communicator.swift
+//  ApiProvider
 //  Assignment
 //
 //  Created by Saim Zahid on 2019-08-19.
@@ -9,8 +9,8 @@
 import UIKit
 
 
-class Communicator {
-    public static let shared = Communicator()
+class ApiProvider {
+    public static let shared = ApiProvider()
     
     public enum APIServiceError: Error {
         case apiError

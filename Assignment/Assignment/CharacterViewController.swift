@@ -16,16 +16,16 @@ class CharacterViewController: UIViewController {
     
     var character: Character!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
     
     fileprivate func configureView() {
+        //These label creations should go into a View Model but for sake for consistency I will keep it like this.
         characterImage.setImage(from: character!.image)
-        nameLabel.text = character.name
-        genderLabel.text = character.gender
-        speciesLabel.text = character.species
+        nameLabel.text = "Name: \(character.name)"
+        genderLabel.text = "Gender: \(character.gender)"
+        speciesLabel.text = "Species: \(character.species)"
     }
 }
