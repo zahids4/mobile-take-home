@@ -116,11 +116,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" textLabel="StU-Be-ggg" detailTextLabel="cc9-D4-ug4" style="IBUITableViewCellStyleSubtitle" id="Pqr-3n-sQ8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="characterCell" textLabel="StU-Be-ggg" detailTextLabel="cc9-D4-ug4" style="IBUITableViewCellStyleSubtitle" id="Pqr-3n-sQ8">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pqr-3n-sQ8" id="HcX-ZF-29j">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="StU-Be-ggg">
@@ -185,9 +185,17 @@
                                     <constraint firstAttribute="height" constant="250" id="ezI-lX-rAa"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-N6-euV">
+                                <rect key="frame" x="186" y="396" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ldJ-N6-euV" firstAttribute="top" secondItem="KIo-Db-mAT" secondAttribute="bottom" constant="8" id="3I1-nZ-2c0"/>
+                            <constraint firstItem="ldJ-N6-euV" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="4Uu-fz-Klw"/>
                             <constraint firstItem="KIo-Db-mAT" firstAttribute="top" secondItem="HPw-uS-v14" secondAttribute="top" constant="50" id="P1y-f4-qGn"/>
                             <constraint firstItem="KIo-Db-mAT" firstAttribute="centerX" secondItem="CQr-9K-wsS" secondAttribute="centerX" id="s88-nq-nVt"/>
                         </constraints>
@@ -195,6 +203,7 @@
                     </view>
                     <connections>
                         <outlet property="characterImage" destination="KIo-Db-mAT" id="rjD-zR-lYr"/>
+                        <outlet property="nameLabel" destination="ldJ-N6-euV" id="AIr-CF-INg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hah-Tz-WoF" userLabel="First Responder" sceneMemberID="firstResponder"/>

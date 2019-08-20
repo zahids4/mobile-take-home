@@ -10,11 +10,13 @@ import UIKit
 
 class CharacterViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var character: Character!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         characterImage.setImage(from: character!.image)
+        nameLabel.text = character.name
     }
 }

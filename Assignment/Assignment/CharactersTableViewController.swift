@@ -57,6 +57,12 @@ class CharactersTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -71,10 +77,10 @@ class CharactersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
         if(indexPath.section == 0) {
             cell.textLabel?.text = aliveCharacters[indexPath.row].name
-            cell.detailTextLabel?.text = aliveCharacters[indexPath.row].status
+            cell.detailTextLabel?.text = aliveCharacters[indexPath.row].created
         } else {
             cell.textLabel?.text = deadCharacters[indexPath.row].name
-            cell.detailTextLabel?.text = deadCharacters[indexPath.row].status
+            cell.detailTextLabel?.text = deadCharacters[indexPath.row].created
         }
 
         return cell
